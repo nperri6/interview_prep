@@ -3,4 +3,27 @@ In the reviews page
 	<div ng-repeat="review in reviews">
 			Review: {{review}}
 	</div>
+
+
+
+<div>
+	Have you completed a one-on-one review? Leave your feedback here!
+</div>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="panel-title"> Leave a Prep Session Review</div>
+	</div>
+	<div class="panel-body">
+		<div ng-hide="submittedReview">
+			<div> <label> Name:  <input type="text" ng-model="sessionRequest.name"> </label> </div>
+			<div> <label> Email:  <input type="text" ng-model="sessionRequest.email"> </label></div>
+			<!-- <span uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['one','two','three']" aria-labelledby="default-rating"></span> -->
+			<div> <label> Review: <textarea ng-model="sessionRequest.description"> </textarea> </label></div>
+			<button ng-click="submitSessionRequest()"> Request a Prep Session! </button>
+		</div>
+		<div ng-show="submittedReview">
+			<div> Your request has been successfully submitted! You will hear from me soon! </div>
+		</div>
+	</div>
+</div>
 </div>

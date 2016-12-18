@@ -1,7 +1,7 @@
 console.info("in the app.js file");
 
 var app = angular
-	.module('ip', ['ngAnimate', 'ui.router', 'templates'] )
+	.module('ip', ['ngAnimate', 'ui.router', 'templates','ui.bootstrap'] )
 	.config(function ($stateProvider, $urlRouterProvider, $locationProvider)
 		{
 			// Routes and States
